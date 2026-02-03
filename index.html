@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyHome Ethiopia - Find Your Dream Home</title>
+    <style>
+        :root {
+            --primary: #1565C0;
+            --primary-dark: #0D47A1;
+            --accent: #43A047;
+            --text: #333;
+            --text-light: #666;
+            --bg: #f5f5f5;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .logo-icon {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 12px;
+            margin-right: 15px;
+            vertical-align: middle;
+            position: relative;
+        }
+        .logo-icon::before {
+            content: "🏠";
+            font-size: 36px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+        }
+        .features {
+            padding: 60px 20px;
+            background: white;
+        }
+        .features h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: var(--bg);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .stats {
+            padding: 40px 20px;
+            background: var(--primary);
+            color: white;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.9;
+        }
+        .footer-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon"></span>MyHome
+            </div>
+            <p class="tagline">Ethiopia's Premier Real Estate Platform</p>
+            <p class="tagline" style="font-size: 1rem; opacity: 0.8;">ቤት ፈልግ • ቤት ሽጥ • ቤት ተከራይ</p>
+            <div class="cta-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.nexusapps.myhome" class="btn btn-primary">
+                    📱 Download on Play Store
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Choose MyHome?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Smart Search</h3>
+                    <p>Find properties by location, price, type, and amenities. Search across all major Ethiopian cities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Map View</h3>
+                    <p>See properties on an interactive map. Find homes near schools, hospitals, and transportation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Direct Messaging</h3>
+                    <p>Contact property owners and agents directly. Schedule viewings with one tap.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏦</div>
+                    <h3>Mortgage Calculator</h3>
+                    <p>Calculate monthly payments. Compare loan options from Ethiopian banks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Verified Listings</h3>
+                    <p>All listings are reviewed. Verified sellers and agents you can trust.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🇪🇹</div>
+                    <h3>Made for Ethiopia</h3>
+                    <p>Support for Amharic. Local payment options. Ethiopian-focused features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">10K+</div>
+                <div>Properties Listed</div>
+            </div>
+            <div>
+                <div class="stat-number">50K+</div>
+                <div>Active Users</div>
+            </div>
+            <div>
+                <div class="stat-number">500+</div>
+                <div>Verified Agents</div>
+            </div>
+            <div>
+                <div class="stat-number">15+</div>
+                <div>Cities Covered</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:support@myhome.nexusapps.com">Contact Us</a>
+        </div>
+        <p class="copyright">
+            © 2025 Nexus Technologies LLC. All rights reserved.<br>
+            Addis Ababa, Ethiopia
+        </p>
+    </footer>
+</body>
+</html>
